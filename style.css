@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: .5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    background-color: black;
+}
+
+.navbar .navbar-brand {
+    font-size: 25px;
+    font-weight: 800px;
+    color: #29f700 !important;
+
+}
+
+#navbarSupportedContent a {
+    color: #fff;
+    border-bottom: 2px solid transparent;
+
+
+}
+
+#navbarSupportedContent a:hover {
+    border-bottom: 2px solid #29f700;
+}
+
+#navbarSupportedContent button {
+    background-color: #29f700;
+    width: 5rem;
+    border-radius: 15px;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(12.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#home h1 {
+    font-size: 50px;
+    color: white;
+    letter-spacing: 3px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 1px 0px #CCC,
+        0px 2px 0px #CCC,
+        0px 3px 0px #CCC,
+        0px 4px 0px #CCC,
+        0px 5px 0px #CCC,
+        0px 6px 0px #CCC,
+        0px 7px 0px #CCC;
+}
+
+#home p {
+    font-size: 18px;
+    color: white;
+}
+
+#home .input-group {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.signin {
+    background: #f44d15 !important;
+    color: white;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*about
+#about{
+    background-color: #CCC !important;
+} */
+#about h1 {
+    font-weight: 800;
+    font-size: 50px;
+    flex-direction: column;
+    color: #2bbb0e;
+    align-items: center;
+    text-align: center;
+}
+
+#about p {
+    color: rgb(9, 6, 6);
+    justify-content: center;
+
+}
+
+
+/*products*/
+#product {
+    background-color: #CCC !important;
+
+}
+
+#product h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #2bbb0e;
+}
+
+#product img {
+    width: 250px;
+    height: 200px;
+
+}
+
+.container.my-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-lg-4,
+.col-md-4,
+.col-12 {
+    margin-top: 15px;
+
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    background: #e5e5e5 !important;
+    border: none !important;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3),
+        inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 20px, 60px;
+}
+
+.card:hover {
+    box-shadow: inset 5px 5px 10px rgba(81, 251, 65, 0.3),
+        inset 4px 4px 10px rgb(9, 83, 10);
+    transition: 0.2s;
+}
+
+
+
+/* Footer  */
+footer {
+    background-color: #03511c;
+
+    color: #fff;
+
+    padding: 50px 0;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+footer .left-col {
+    flex: 1;
+}
+
+.input-group input.form-control {
+    width: 10px;
+
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-col,
+.right-col {
+    flex: 1;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.rights-text {
+    margin-top: 20px;
+}
+
+.right-col {
+    flex: 1;
+    text-align: center;
+}
+
+.right-col h1 {
+    color: #fff;
+}
+
+.border {
+    height: 2px;
+    background-color: #fff;
+    width: 50px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.txtb {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #3498db;
+
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+    font-size: 30px;
+    color: white;
+
+}
+
+
+.social-media i:hover {
+    transform: scale(1.2);
+    color: rgb(217, 81, 7);
+
+}
+
+.social-media a:hover .fa-facebook {
+    color: #1877f2;
+
+}
+
+.social-media a:hover .fa-twitter {
+    color: #1877f2;
+
+}
+
+.social-media a:hover .fa-linkedin {
+    color: #1877f2;
+
+}
+
+.mailo {
+    color: white;
+    text-decoration: none;
+}
+
+.mailo:hover {
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+/*contact page*/
+
+.container1 {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #1ee772;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container1 h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container1 {
+    display: grid;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #711beb;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1571f;
+}
+
+
+
+/*media screen*/
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+    }
+
+    .right-col {
+        margin-top: 20px;
+    }
+}
+
+/*product responsive*/
+@media screen and (max-width: 768px) {
+    .row {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+
+        margin: 60px;
+    }
+}
+
+/*home*/
+
+@media only screen and (max-width: 768px) {
+    #home .input-group {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #home .input-group {
+        width: 30%;
+    }
+
+    .right-col .input-group input.form-control {
+        max-width: 300px;
+        width: 100%;
+        margin-left: 100px;
+
+    }
+}
+
+/*home page*/
+
+#hom1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(11.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+
+#index1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(h1.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#loginpage {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(h1.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+/* card summary*/
+.cart-summary-container {
+    max-height: 200px;
+
+    overflow-y: auto;
+
+}

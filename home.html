@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food delivery website</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cart.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">SPICES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="home.html#product">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" id="searchForm">
+            <input class="form-control me-2 searchbar" type="search" id="searchBar" name="searchBar"
+              placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline" type="submit">Search</button>
+          </form>
+
+          <div class="row justify-content-end ms-2">
+            <div class="col-auto">
+              <button class="btn btn-outline position-relative" id="cartButton">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-shopping-cart me-2"></i>
+                  <span class="badge bg-secondary position-absolute top-0 start-100 translate-middle" id="cart-badge"
+                    style="color: yellow;">0</span>
+                  <span class="d-none d-sm-block">Cart</span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="ms-3">
+            <a href="index.html"><button class="btn btn-signin">logout</button></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+  </header>
+  <section id="hom1">
+    <div class="container mt-2" style="position: absolute; top:110px; left: 0;">
+      <h2 id="msg"></h2>
+      <h2 id="greet"></h2>
+    </div>
+
+
+
+  </section>
+  <section id="product">
+    <div class="container my-3">
+      <h1 class="text-center">OUR PRODUCTS</h1>
+      <div class="row" id="product-list">
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+          <div class="card">
+            <img src="15.jpg" class="card-img-top" alt="Product Image 1">
+            <div class="card-body text-center">
+              <h5 class="card-title">ARTICHOKE DISHES</h5>
+              <p>Price: ₹60</p>
+              <button class="btn signin add-to-cart" data-id="1" data-name="ARTICHOKE DISHES" data-price="60">Add
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+          <div class="card">
+            <img src="17.jpg" class="card-img-top" alt="Product Image 2">
+            <div class="card-body text-center">
+              <h5 class="card-title">EGGPLANT CAVIAR</h5>
+              <p>Price: ₹130</p>
+              <button class="btn signin add-to-cart" data-id="2" data-name="EGGPLANT CAVIAR" data-price="130">Add
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+          <div class="card">
+            <img src="2.jpg" class="card-img-top" alt="Product Image 3">
+            <div class="card-body text-center">
+              <h5 class="card-title">ROASTED SOUP</h5>
+              <p>Price: ₹90</p>
+              <button class="btn signin add-to-cart" data-id="3" data-name="ROASTED SOUP" data-price="90">Add
+                Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="product-list">
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+          <div class="card">
+            <img src="15.jpg" class="card-img-top" alt="Product Image 1">
+            <div class="card-body text-center">
+              <h5 class="card-title">CHHENA DISHES</h5>
+              <p>Price: ₹70</p>
+              <button class="btn signin add-to-cart" data-id="4" data-name="CHHENA DISHES" data-price="70">Add
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+          <div class="card">
+            <img src="17.jpg" class="card-img-top" alt="Product Image 5">
+            <div class="card-body text-center">
+              <h5 class="card-title">YET ANOTHER CAVIAR</h5>
+              <p>Price: ₹150</p>
+              <button class="btn signin add-to-cart " data-id="5" data-name="YET ANOTHER CAVIAR" data-price="150">Add
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 mt-3">
+          <div class="card">
+            <img src="15.jpg" class="card-img-top" alt="Product Image 6">
+            <div class="card-body text-center">
+              <h5 class="card-title">ANOTH SOUP</h5>
+              <p>Price: ₹250</p>
+              <button class="btn signin add-to-cart" data-id="6" data-name="ANOTHER SOUP" data-price="250">Add
+                Cart</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+  <script>
+    let Usercreds = JSON.parse(sessionStorage.getItem("user-creds"));
+    let Userinfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+    let msghead = document.getElementById('msg');
+    let greethead = document.getElementById('greet');
+    let signoutbtn = document.getElementById('signoutbutton');
+
+
+
+    let Signout = () => {
+      sessionStorage.removeItem("user-creds");
+      sessionStorage.removeItem("user-info");
+      window.location.href = 'login.html'
+    }
+    let CheckCred = () => {
+      if (!sessionStorage.getItem("user-creds"))
+        window.location.href = 'login.html';
+
+      else {
+        msghead.innerText = `User with email "${Usercreds.email}" logged in...!`;
+        greethead.innerText = `Welcome ${Userinfo.firstname} ${Userinfo.lastname}!`;
+
+      }
+    }
+    window.addEventListener('load', CheckCred);
+    signoutbtn.addEventListener('click', Signout);
+  </script>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="left-col">
+
+        <div class="logo"></div>
+        <div class="social-media">
+
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div><br><br>
+
+        <p><img src="phone.png"> +91-8934567890<br><img src="mail.png">&nbsp; spices941@gmail.com</p>
+        <p><img src="location.png"> LP Towers,
+          Hitech-city<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hyderabad-5884401</p><br>
+      </div>
+      <div class="right-col">
+        <h1 style="color: #f51010">Our Newsletter</h1>
+        <div class="border"></div>
+        <p>Enter Your Email to get our News and updates.</p>
+        <div class="input-group mt-3">
+          <input type="text" class="form-control" placeholder="Email Address">
+          <button class="btn signin">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <p class="text-center" style=" color: #f51010;">Copyright © 2024 All Rights Reserved.</p>
+  <!-- Cart Summary Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header sticky-top">
+          <h5 class="modal-title" id="cartModalLabel">Cart Summary</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="cart-summary-container">
+            <ul id="cart-items-modal"></ul>
+            <p>Total: ₹<span id="cart-total-modal">0</span></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!--<button type="button" class="btn btn-outline" id="checkout-btn-modal">Checkout</button>-->
+          <button class="btn btn-secondary" id="rzp-button1">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    var options = {
+      "key": "rzp_test_lku5PnOOGgySYB",
+      "amount": "500",
+      "currency": "INR",
+      "name": "Acme Corp",
+      "description": "Test Transaction",
+      "image": "",
+      "id": "order_Nb2aK7GOgQbcgr",
+      "order_id": "",
+      "handler": function (response) {
+        clearCart();
+        alert('Payment successful!');
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+
+      },
+      "prefill": {
+        "name": "Gautham Kumar", //your customer's name
+        "email": "gaurav.kumar@example.com",
+        "contact": "9000090089"  //Provide the customer's phone number for better conversion rates 
+      },
+      "notes": {
+        "address": "SPICES Corporate Office"
+      },
+      "theme": {
+        "color": "#3399cc"
+      }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response) {
+      alert(response.error.metadata.order_id);
+      alert(response.error.metadata.payment_id);
+    });
+    function clearCart() {
+
+      cartItems = [];
+      cartTotal = 0;
+      cartCount = 0;
+
+
+      if (cartBadge) {
+        cartBadge.textContent = cartCount;
+      }
+      displayCartSummary();
+    }
+    document.getElementById('rzp-button1').onclick = function (e) {
+
+      options.amount = cartTotal * 100;
+
+
+      var rzp1 = new Razorpay(options);
+      rzp1.open();
+
+      e.preventDefault();
+    }
+
+  </script>
+  </div>
+  </div>
+  </div>
+  </div>
+  <script src="cart1.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="cart.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
